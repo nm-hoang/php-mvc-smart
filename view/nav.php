@@ -1,3 +1,5 @@
+
+
 <link rel="stylesheet" href="css/cardDesign.css">
 <section class="top-info-menu">	
 		<div class="container">
@@ -10,7 +12,7 @@
 			<div class="col-6">
 			
 				<div class="top-menu-info-right ">
-					<a href="#">Sign in</a>
+					<a href="view/login">Sign in</a>
 					<a href="#">Log out</a> 
 				</div>
 			</div>	

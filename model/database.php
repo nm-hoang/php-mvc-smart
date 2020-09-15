@@ -9,7 +9,7 @@ class Database extends InfoServer{
     // $username = "root";
     // $password = "";
     // $dbname = "gamelist";
-    $server = $this -> servername;
+    $server = $this -> servername . "/".$this-> dbname;
     $this->conn = new mysqli($this -> servername, $this ->username, $this ->password, $this ->dbname);
 
     if ($this->conn->connect_error) {

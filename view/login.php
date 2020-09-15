@@ -3,7 +3,7 @@ include 'nav.php';
 include 'header.php';
 
 ?>
-<link rel="stylesheet" href="css/loginDesign.css">
+<link rel="stylesheet" href="../css/loginDesign.css">
 <div class="login-card size-card">
     <h1>Log-in</h1><br>
   <form>

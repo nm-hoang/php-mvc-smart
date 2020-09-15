@@ -14,8 +14,8 @@
     public function login(){
       include 'view/login.php';
     }
-    public function signup(){
-      include 'view/signup.php';
+    public function addgame(){
+      include 'view/addgame.php';
     }
   }
 ?>
