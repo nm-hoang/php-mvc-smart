@@ -1,16 +1,26 @@
 <?php
-   include './nav.php';
-   include './header.php';
-   
+   include 'nav.php';
+   include 'header.php';
    ?>
 <div class="row" style = "padding-top:30px">
-
-
-<div class="custom-card">
-  <img src="https://i.etsystatic.com/6804182/r/il/deb3a9/2186788999/il_570xN.2186788999_tqbf.jpg" alt="Avatar" style="width:20%">
-  <h1></h1>
-  <div class="container">
-    <h4><b>Jane Doe</b></h4> 
-    <p>Interior Designer</p> 
+<?php while ($gameinfo = $game->fetch_assoc()){ ?>
+  <div class="custom-card">
+      <div class="wrapper">
+        <div class="product-img">
+          <img src="<?php echo $gameinfo['image']?>" height="420" width="310">
+        </div>
+        <div class="product-info">
+          <div class="product-text">
+            <h1><?php echo $gameinfo['title'] ?></h1>
+            <h2>by <?php echo " ". $gameinfo['author'] ?></h2>
+            <p><?php echo $gameinfo['description'] ?></p>
+          </div>
+          <div class="product-price-btn">
+            <p><span>78</span>$</p>
+            <button type="button">buy now</button>
+          </div>
+        </div>
+      </div>
   </div>
-</div>
+
+<?php } ?>

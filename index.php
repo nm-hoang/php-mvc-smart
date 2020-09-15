@@ -1,8 +1,15 @@
 <?php
 require_once("controller/controller.php");
-//include 'view/nav.php';
-//include 'view/header.php';
-
   $controller = new Controller();
-  $controller->viewAll();
+  if(isset($_GET['id'])){
+    $controller ->viewGameById($_GET['id']);
+  
+  }else if (isset($_GET['action'])== "signup"){
+    $controller-> signup();
+  }
+  else{
+    $controller->viewAll();
+  }
+
+
 ?>

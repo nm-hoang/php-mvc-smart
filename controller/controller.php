@@ -1,19 +1,21 @@
 <?php
- // require_once("model/database.php");
+  require_once("model/database.php");
 
-  class Controller {
+  class Controller extends Database {
     public function viewAll() {
-      echo "test";
-     // $games = $this->getGameList();
-      
+      $games = $this->getGameList();
       include 'view/gamelist.php';
     }
 
-    // public function viewGameDetail() {
-    //   $game = $this->getGameDetail($_GET['gamename']);
-    //   include 'view/gameDetail.php';
-    // }
+    public function viewGameById($id) {
+       $game = $this->getGameDetail($id);
+       include 'view/viewgame.php';
+    }
+    public function login(){
+      include 'view/login.php';
+    }
+    public function signup(){
+      include 'view/signup.php';
+    }
   }
-  echo "2"; 
-
 ?>

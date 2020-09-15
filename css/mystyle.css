@@ -7,7 +7,10 @@
     transition: 0.3s;
     border-radius: 5px;
     width: 70%;
+    height:478px;
+    margin-top: 180px;
     margin-left: 80px;
+    margin-bottom: 20px;
     }
     
     /* Add rounded corners to the top left and the top right corner of the image */
@@ -21,6 +24,9 @@ img {
     max-width: 40%;
     max-height: 40%;
  } 
+ .ct-card{
+     padding-top:20px;
+ }
   .product-card {
     padding: 2%;
     flex-grow: 1;
@@ -37,6 +43,7 @@ img {
     margin: 0px;
     padding: 0px;
     font-family: ptsans;
+    font-size:19px;
 }
 ul li{
     list-style: none;

@@ -1,18 +1,16 @@
 <?php
-
-class Database {
-  protected $conn;
-
+require_once('config.php');
+class Database extends InfoServer{
+  protected $conn ;
+  protected $server;
   function __construct() {
-    echo "a";
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "123456";
-    $dbname = "gamelist";
-
-    echo "b"; 
-    $this->conn = new mysqli($servername, $username, $password, $dbname);
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "gamelist";
+    $server = $this -> servername;
+    $this->conn = new mysqli($this -> servername, $this ->username, $this ->password, $this ->dbname);
 
     if ($this->conn->connect_error) {
       die ("Connection failed: " . $this->conn->connect_error);
@@ -29,14 +27,16 @@ class Database {
     return $games;
   }
 
-  // protected function getGameDetail($name) {
-  //   $sql = "
-  //     SELECT Name, Picture, Producer, Price, Description, Quantity 
-  //     FROM games 
-  //     WHERE Name = '{$name}'";
-  //   $game = $this->conn->query($sql);
-  //   return $game;
-  // }
+  protected function getGameDetail($id) {
+    // echo $id;
+    $sql = " SELECT * FROM game WHERE id = '{$id}'";
+    $game = $this->conn->query($sql);
+    return $game;
+  
+    // $stmt = $this->conn -> prepare("SELECT * FROM game WHERE `id` = ? ");
+    // $stmt -> execute($id);
+    // return $stmt;
+  }
 }
 
 ?>
