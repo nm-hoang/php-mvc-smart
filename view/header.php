@@ -31,7 +31,7 @@
     <div class="col-5">
       <ul class="mainmenu">
 
-        <li><a href="view/gamelist.php">All Products</a>
+        <li><a href="index.php">All Products</a>
           <span class="active"></span>
         </li>
         <li><a href="#">Carts</a></li>

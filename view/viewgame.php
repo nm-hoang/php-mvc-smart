@@ -16,7 +16,7 @@
             <p><?php echo $gameinfo['description'] ?></p>
           </div>
           <div class="product-price-btn">
-            <p><span>78</span>$</p>
+            <p><span><?php echo $gameinfo['price']?></span>$</p>
             <button type="button">buy now</button>
           </div>
         </div>

@@ -22,20 +22,26 @@ class Database extends InfoServer{
   }
 
   protected function getGameList() {
-    $sql = "SELECT * FROM game";
+    $sql = "SELECT * FROM `game`";
     $games = $this->conn->query($sql);
     return $games;
   }
 
   protected function getGameDetail($id) {
-    // echo $id;
     $sql = " SELECT * FROM game WHERE id = '{$id}'";
     $game = $this->conn->query($sql);
     return $game;
-  
-    // $stmt = $this->conn -> prepare("SELECT * FROM game WHERE `id` = ? ");
-    // $stmt -> execute($id);
-    // return $stmt;
+  }
+
+  protected function checkAdmin($user,$pass){
+  $check = false;
+  $sql = "SELECT * FROM user WHERE username ='{$user}' AND password ='{$pass}'";
+  $account = $this ->conn ->query($sql);
+  if($account -> num_rows > 0){
+    return $check = true;
+  }
+  else 
+    return $check;
   }
 }
 
