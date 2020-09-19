@@ -4,9 +4,9 @@ html {
   }
   
   * {
+        /* margin-top: -40px; */
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
   }
   
   @font-face {
@@ -71,7 +71,7 @@ html {
     position: relative;
     z-index: 1;
     color: #f7f7f7;
-    background: #f34d35;
+    background: #2d2a2a;
   }
   
   .cart {
@@ -102,7 +102,7 @@ html {
   }
   
   .th {
-    background: #f34d35;
+    background: #635856;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
@@ -110,7 +110,7 @@ html {
   }
   
   .tf {
-    background: #f34d35;
+    background: #635856;
     text-transform: uppercase;
     text-align: right;
     font-size: 1.2em;  
@@ -144,7 +144,7 @@ html {
   }
   
   .col-total p {
-    color: #12c8b1;
+    color: #2a3130;
   }
   
   .tf .col {

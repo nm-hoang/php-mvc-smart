@@ -13,9 +13,7 @@ while ($game = $games->fetch_assoc()) {
         <h4>Price: <?php echo $game['price'] ?>$</h4>
         <h4>Title: <a href="index.php?id=<?php echo $game['id'] ?>"> <?php echo " ". $game['title'] ?> </a></h4>
         <h4><?php echo "Author: ". $game['author'] ?></h4>
-        <?php if(isset($_SESSION['userlogin'])){
-            echo $_SESSION['userlogin'];
-           }?>
+       
    </div>
 <?php  } ?>
     

@@ -14,7 +14,7 @@ include 'header.php';
     <?php if(isset($checkAdmin)){
             if($checkAdmin == false){?>
         <h1>You are not an admin</h1>
-    <?php } else{ echo $_SESSION['userlogin'] ?>
+    <?php } else{  ?>
         <script> window.location.href = 'index.php' </script>
     <?php } }?>
   <div class="login-help">

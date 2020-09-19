@@ -1,7 +1,8 @@
 <?php
   session_start();
-  require_once("model/database.php");
   $_SESSION['cart'] = array();
+  require_once("model/database.php");
+ 
   class Controller extends Database {
     public function viewAll() {
       $games = $this->getGameList();
@@ -14,7 +15,6 @@
        if(isset($_POST['buy'])){
          $element = array("Title"=>$gameinfo['title'], "Price"=>$gameinfo['price']);
          array_push($_SESSION['cart'],$element);
-         print_r($_SESSION['cart']);
         }
        include 'view/viewgame.php';
     }
@@ -43,7 +43,8 @@
       include 'view/logout.php';
     }
     public function viewCart(){
-
+      $game = $this->getGameDetail('1');
+      $gameinfo = $game->fetch_assoc();
       include 'view/viewcart.php';
     }
     
