@@ -3,8 +3,8 @@
    include 'header.php';
    ?>
 <div class="row" style = "padding-top:30px">
-<?php while ($gameinfo = $game->fetch_assoc()){ ?>
-  <div class="custom-card">
+  <form method="POST">
+    <div class="custom-card">
       <div class="wrapper">
         <div class="product-img">
           <img src="<?php echo $gameinfo['image']?>" height="420" width="310">
@@ -17,10 +17,10 @@
           </div>
           <div class="product-price-btn">
             <p><span><?php echo $gameinfo['price']?></span>$</p>
-            <button type="button">buy now</button>
+            <button name="buy" type="submit">buy now</button>
           </div>
         </div>
       </div>
+    </form>
   </div>
 
-<?php } ?>

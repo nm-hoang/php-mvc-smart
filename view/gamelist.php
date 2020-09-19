@@ -5,7 +5,7 @@ include 'header.php';?>
 <!-- If admin is log in, show info admin -->
 <?php if(isset($_SESSION['userlogin'])){ ?>
       <h1>&nbspHello Admin</h1>
-<?php }
+<?php  }
 while ($game = $games->fetch_assoc()) {
 ?>
    <div class="col-sm-3">

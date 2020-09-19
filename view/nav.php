@@ -6,7 +6,9 @@
 			<div class="col-6">
 				<div class="top-menu-info-left">
 				<a href="index.php"><span class="wl">Game center.	</span>	</a>
-					<a href="#">[Manager Account]</a>
+				<?php if(isset($_SESSION['userlogin'])){?>
+					<a href="#">[Manager Product]</a>
+					<?php } ?>
 				</div>
 			</div>
 			<div class="col-6">

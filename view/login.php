@@ -15,7 +15,7 @@ include 'header.php';
             if($checkAdmin == false){?>
         <h1>You are not an admin</h1>
     <?php } else{ echo $_SESSION['userlogin'] ?>
-        
+        <script> window.location.href = 'index.php' </script>
     <?php } }?>
   <div class="login-help">
     <a href="#">Register</a> • <a href="#">Forgot Password</a>

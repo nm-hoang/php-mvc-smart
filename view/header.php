@@ -34,7 +34,7 @@
         <li><a href="index.php">All Products</a>
           <span class="active"></span>
         </li>
-        <li><a href="#">Carts</a></li>
+        <li><a href="admin?action=card">Carts</a></li>
       </ul>
     </div>
     <div class="col-2 logo-mb">
