@@ -6,6 +6,8 @@
             $controller ->login();
         }else if($_GET['action']=='card'){
             $controller -> viewCart();
+        }else if($_GET['action']=='addgame'){
+            $controller -> addgame();
         }
         else{
             $controller->logout();

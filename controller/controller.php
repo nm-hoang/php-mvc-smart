@@ -16,7 +16,8 @@
          $element = array("Title"=>$gameinfo['title'], "Price"=>$gameinfo['price']);
          array_push($_SESSION['cart'],$element);
         }
-       include 'view/viewgame.php';
+        include 'view/viewgame.php';
+        print_r($_SESSION['cart']);
     }
     public function addgame(){
       include 'view/addgame.php';
