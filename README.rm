@@ -2,7 +2,7 @@ My develope enviroment: Wampserver64, myPhpAdmin
 
 - First you need to clone my source code: git clone https://github.com/nm-hoang/php-mvc-smart
 - Add file gamelist.sql to database;
-- Edit information suitable for your database in file config.php, my database's name is gamelist
+- Edit information suitable for your database in file config.php, my database's name is "gamelist"
 - Open a browser, when you are in my web Game, there's a all products show up in below. If you want to see detail click on
  "Title of the game", It will show up a new window shows details about the game
 - It has header and navbar on a top of the page, click "Game center" to go to index.php file,
